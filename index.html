@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>チームみらい マニフェスト暗記ツール</title>
+<title>チームみらい マニフェストクイズ</title>
 <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { font-size: 16px; -webkit-text-size-adjust: 100%; }
@@ -432,7 +432,7 @@ function ManifestoStudy() {
   var handleShare = function() {
     var text = "チームみらいのマニフェストを暗記できるツールです！\n17問の長文回答型クイズで記憶を定着させましょう。";
     if (navigator.share) {
-      navigator.share({ title: "チームみらい マニフェスト暗記ツール", text: text, url: location.href });
+      navigator.share({ title: "チームみらい マニフェストクイズ", text: text, url: location.href });
     } else {
       navigator.clipboard.writeText(text + "\n" + location.href).then(function() {
         alert("リンクをコピーしました！");
@@ -445,7 +445,7 @@ function ManifestoStudy() {
     return e("div", { className: "screen-menu" },
       e("div", { className: "menu-inner" },
         e("div", { className: "menu-header" },
-          e("h1", null, "チームみらい マニフェスト暗記ツール"),
+          e("h1", null, "チームみらい マニフェストクイズ"),
           e("p", null, "質問に長文で回答し、模範解答と比較して定着を図りましょう")
         ),
         stats.total > 0 && e("div", { className: "stats-bar" },
